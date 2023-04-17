@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+
+body {
+  background-color: lightgray;
+  border: 2px solid black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form {
+  margin-top: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 23px;
+}
+.form p {
+  text-align: center;
+  color: lightslategray;
+  margin-bottom: 15px;
+}
+.form-validator {
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.form label {
+  display: block;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.form-group .form-control {
+  display: flex;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  width: 100%;
+  margin: auto;
+}
+.form-group .form-control:focus {
+  border-color: #0B2447;
+  box-shadow: #0B2447 0px 0px 10px;
+}
+.form-group--radio {
+  display: flex;
+  gap: 0 25px;
+}
+.form-group--radio input[type="radio"]:focus {
+  box-shadow: none;
+}
+.form-group--radio > div {
+  display: flex;
+  gap: 0 5px;
+}
+.form-group.invalid .form-control {
+  border-color: lightcoral;
+  box-shadow: lightcoral 0px 0px 10px;
+}
+.form-group.invalid input[type="radio"] {
+  box-shadow: none;
+}
+.form-group.invalid .form-message {
+  color: lightcoral;
+}
+.form-message {
+  margin-top: 10px;
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+}
+.form-submit {
+  position: relative;
+  font-weight: bold;
+  padding: 15px 20px;
+  background-color: #19376D;
+  color: white;
+  border-radius: 100rem;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.form-submit:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #0B2447;
+  transition: all 0.3s ease;
+}
+.form-submit:hover:after {
+  left: 0;
+  width: 100%;
+  border-radius: 100rem;
+}
+.form-submit:active {
+  top: 2px;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,118 @@
+body{
+    background-color: lightgray;
+    border: 2px solid black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form{
+    
+    h3{
+        text-align: center;
+        font-weight: bold;
+        font-size: 23px;
+    }
+    p{
+        text-align: center;
+        color: lightslategray;
+        margin-bottom: 15px;
+    }
+    margin-top: 100px;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-validator{
+        display: flex ;
+        flex-direction: column;
+        gap: 25px 0;
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px; 
+    }
+    label{
+        display: block;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    &-group{
+        .form-control{
+            display: flex;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            border: 2px solid lightgray;
+            width: 100%;
+            margin: auto;
+            &:focus{
+                border-color: $color-primary;
+                box-shadow: $color-primary 0px 0px 10px;
+            }
+        }
+        &--radio{
+            display: flex;
+            gap: 0 25px;
+            input[type="radio"]:focus{
+                box-shadow: none;
+            }
+        }
+      
+        &--radio > div{
+            display: flex;
+            gap: 0 5px;
+        }
+    }
+    &-group.invalid{
+        .form-control{
+            border-color:  lightcoral;
+            box-shadow: lightcoral 0px 0px 10px;
+           
+        }
+        input[type="radio"]{
+            box-shadow: none;
+        }
+        .form-message{
+
+            color: lightcoral;
+        }
+    }
+    &-message{
+        margin-top: 10px;
+        display: block;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    &-submit{
+        position: relative;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: $color-secondary;
+        color: white;
+        border-radius: 100rem;
+        z-index: 1;
+        overflow: hidden;
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+            7px 7px 20px 0px rgba(0,0,0,.1),
+            4px 4px 5px 0px rgba(0,0,0,.1);
+        &:after{
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            background-color: $color-primary;
+            transition: all 0.3s ease;
+        }
+        &:hover:after{
+            left: 0;
+            width: 100%;
+            border-radius: 100rem;
+        }
+        &:active{
+            top: 2px;
+        }
+    }
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From validate</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <section class="form container">
+        <form class="form-validator" id="form-1">
+            <h3>Thành viên đăng ký</h3>
+            <p>Cùng nhau học lập trình miễn phí tại F8 </p>
+            <div class="form-group">
+                <label class="form-label" for="fullname">Tên đầy đủ</label>
+                <input class="form-control" name="fullname" id="fullname" type="text" placeholder="VD: Thanh Sơn">
+                <span class="form-message"></span>
+            </div>
+            <!-- item form  -->
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" type="email" name="email" id="email" placeholder="VD: email.domain.com">
+                <span class="form-message"></span>
+            </div>
+            <!-- item form  -->
+            <div class="form-group">
+                <label class="form-label" for="password">Mật khẩu</label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+                <span class="form-message"></span>
+            </div>
+            <!-- item form  -->
+            <div class="form-group">
+                <label class="form-label" for="password_confirmation">Nhập lại mật
+                    khẩu</label>
+                <input class="form-control" type="password" name="password_confirmation" id="password_confirmation"
+                    placeholder="Nhập lại mật khẩu">
+                <span class="form-message"></span>
+            </div>
+            <!-- item form  -->
+            <div class="form-group">
+                <label class="form-label" for="gender">Giới tính</label>
+                <div class="form-group--radio">
+                    <div>
+                        <input class="form-control" type="radio" name="gender" value="male">
+                        <span>Nam</span>
+                    </div>
+                    <div>
+                        <input class="form-control" type="radio" name="gender" value="female">
+                        <span>Nữ</span>
+                    </div>
+                    <div>
+                        <input class="form-control" type="radio" name="gender" value="orther">
+                        <span>Khác</span>
+                    </div>
+                </div>
+
+                <span class="form-message"></span>
+            </div>
+            <!-- item form  -->
+            <button class="form-submit" id="submit">Đăng ký</button>
+        </form>
+    </section>
+</body>
+<script src="./validator.js"></script>
+<script src="./index.js"></script>
+
+</html>
